@@ -12,11 +12,13 @@ public class perimeter_and_area {
         area = pi * r * r;
         perimeter = 2 * pi *r;
         System.out.println("The area of our circle = "+area+" and the perimeter is = "+perimeter);
-
+        
+        System.out.println("The calculation of the piece circle area = ");
+        
         center_angle = input.nextInt();
         formula = (pi *(r*r)*center_angle)/360;
 
-        System.out.println("The area of the circle which we know the radius and the center angle = "+formula);
+        System.out.println("The area of the piece circle which we know the radius and the center angle = "+formula);
 
     }
 }
