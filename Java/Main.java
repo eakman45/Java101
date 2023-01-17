@@ -2,25 +2,33 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        //A right triangle
-        //defining edge and getting lengths with input
-        int edge1,edge2;
-        double u,edge3,area;
+        int number1,number2,select;
+        //Taking input for first number in our calculation.
+        System.out.println("Enter the first number = ");
         Scanner input = new Scanner(System.in);
-        System.out.println("Please enter the lenght of first edge = ");
-        edge1 = input.nextInt();
-        System.out.println("Please enter the lenght of second edge = ");
-        edge2 = input.nextInt();
+        number1 = input.nextInt();
+        System.out.println("Enter the second number = ");
+        number2 = input.nextInt();
 
-        //The calculation of hypotenuse
-        edge3 = Math.sqrt((edge1*edge1)+(edge2*edge2));
-        System.out.println("The lenght of hypotenuse edge is = "+edge3);
 
-        //perimeter and area calculations
-        u = ((edge1+edge2+edge3)/2);
-        area = Math.sqrt(u*(u-edge1)*(u-edge2)*(u-edge3));
-        System.out.println("The area of our right triangle is = "+area);
-        System.out.println("The perimeter of our right triangle is = "+(u*2));
+        //Taking the operation
+        System.out.println("1-Sum\n2-Subtraction\n3-Multiplication\n4-Division");
+        System.out.println("Your Selection = ");
+        select= input.nextInt();
 
+        switch (select){
+            case 1:
+                System.out.println("Your result = "+(number1+number2));                break;
+            case 2:
+                System.out.println("Your result = "+(number1-number2));                break;
+            case 3:
+                System.out.println("Your result = "+(number1*number2));                break;
+            case 4:
+                System.out.println("Your result = "+(number1/number2));
+                break;
+
+            default:
+                System.out.println("Enter a valid operand!");
+        }
     }
 }
